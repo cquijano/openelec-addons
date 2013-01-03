@@ -1,0 +1,11 @@
+#!/bin/sh
+
+################################################################################
+################################################################################
+
+. /etc/profile
+
+ADDON_DIR="$HOME/.xbmc/addons/service.downloadmanager.automatic"
+ADDON_HOME="$HOME/.xbmc/userdata/addon_data/service.downloadmanager.automatic"
+
+$ADDON_DIR/bin/automatic -c $ADDON_DIR/etc/automatic.conf

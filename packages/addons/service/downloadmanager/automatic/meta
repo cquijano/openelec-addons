@@ -1,0 +1,21 @@
+################################################################################
+################################################################################
+
+PKG_NAME="automatic"
+PKG_VERSION="0.8.1"
+PKG_REV="1"
+PKG_ARCH="any"
+PKG_LICENSE="GPL"
+PKG_SITE="http://kylek.is-a-geek.org:31337/Automatic"
+PKG_URL="https://github.com/1100101/Automatic/archive/v$PKG_VERSION.tar.gz"
+PKG_DEPENDS="pcre libxml2 curl"
+PKG_BUILD_DEPENDS="toolchain pcre libxml2 curl"
+PKG_PRIORITY="optional"
+PKG_SECTION="service/downloadmanager"
+PKG_SHORTDESC="Automatic torrent downloader"
+PKG_LONGDESC="Automatic torrent downloader"
+
+PKG_IS_ADDON="yes"
+PKG_ADDON_TYPE="xbmc.service"
+
+PKG_AUTORECONF="no"

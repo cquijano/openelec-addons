@@ -1,0 +1,21 @@
+################################################################################
+################################################################################
+
+PKG_NAME="deleter"
+PKG_VERSION="0.1"
+PKG_REV="1"
+PKG_ARCH="any"
+PKG_LICENSE="GPL"
+PKG_SITE="https://github.com/cquijano/deleter"
+PKG_URL="https://github.com/cquijano/deleter/archive/v0.1.tar.gz"
+PKG_DEPENDS=""
+PKG_BUILD_DEPENDS=""
+PKG_PRIORITY="optional"
+PKG_SECTION="service/system"
+PKG_SHORTDESC="Automatic free size keeper"
+PKG_LONGDESC="Automatic delete older files to keep free space on hard disk"
+
+PKG_IS_ADDON="yes"
+PKG_ADDON_TYPE="xbmc.service"
+
+PKG_AUTORECONF="no"

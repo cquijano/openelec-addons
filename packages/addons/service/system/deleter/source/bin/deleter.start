@@ -1,0 +1,9 @@
+#!/bin/sh
+
+################################################################################
+################################################################################
+
+. /etc/profile
+
+ADDON_DIR="$HOME/.xbmc/addons/service.downloadmanager.deleter"
+ADDON_HOME="$HOME/.xbmc/userdata/addon_data/service.downloadmanager.deleter"

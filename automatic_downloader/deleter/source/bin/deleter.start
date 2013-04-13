@@ -7,3 +7,5 @@
 
 ADDON_DIR="$HOME/.xbmc/addons/service.downloadmanager.deleter"
 ADDON_HOME="$HOME/.xbmc/userdata/addon_data/service.downloadmanager.deleter"
+
+$ADDON_DIR/bin/deleter /storage/downloads 10

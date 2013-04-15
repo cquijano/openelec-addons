@@ -22,8 +22,8 @@
 
 . config/options $1
 
-mkdir -p $INSTALL/usr/share/xbmc/addons/service.xbmc.automatic
-  cp $BUILD/$PKG_NAME/src/automatic $INSTALL/usr/share/xbmc/addons/service.xbmc.automatic/automatic
-mkdir -p $INSTALL/usr/share/xbmc/addons/service.xbmc.automatic/etc
-  cp $BUILD/$PKG_NAME/src/automatic.conf-sample $INSTALL/usr/share/xbmc/addons/service.xbmc.automatic/etc/automatic.conf
+mkdir -p $INSTALL/bin
+  cp $BUILD/$PKG_NAME/src/automatic $INSTALL/bin/automatic
+mkdir -p $INSTALL/etc
+  cp $BUILD/$PKG_NAME/src/automatic.conf-sample $INSTALL/etc/automatic.conf
 

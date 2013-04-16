@@ -28,5 +28,13 @@ fi
 if [ ! -e /storage/automatic.state ] ; then
 	touch /storage/automatic.state
 fi
+
+PORT="$(netstat -tlpn |grep 9091)"
+while [ -z "$PORT" ] ; do
+        sleep 1
+        progress "Waiting for transmission"
+        PORT="$(netstat -tlpn |grep 9091)"
+done
+
 progress "start automatic daemon"
-  /bin/automatic -c /etc/automatic.conf
+  /bin/automatic -f -c /etc/automatic.conf > /dev/null 2>&1 &

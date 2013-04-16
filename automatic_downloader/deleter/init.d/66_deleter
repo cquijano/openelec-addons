@@ -26,4 +26,4 @@ if [ ! -e /storage/download ] ; then
 fi
 
 progress "start deleter daemon"
-  /bin/deleter /storage/download 10
+  /bin/deleter /storage/download 10 > /dev/null 2>&1 &

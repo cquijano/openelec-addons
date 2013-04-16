@@ -35,4 +35,4 @@ if [ ! -e /storage/watch ] ; then
 fi
 
 progress "start transmission daemon"
-  /bin/transmission-daemon -w /storage/download --incomplete-dir /storage/incoming --watch-dir /storage/watch -a *.*.*.* -T
+  /bin/transmission-daemon -w /storage/download --incomplete-dir /storage/incoming --watch-dir /storage/watch -a '*.*.*.*' -T

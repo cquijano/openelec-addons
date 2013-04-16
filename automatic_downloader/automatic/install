@@ -25,5 +25,4 @@
 mkdir -p $INSTALL/bin
   cp $BUILD/$PKG_NAME/src/automatic $INSTALL/bin/automatic
 mkdir -p $INSTALL/etc
-  cp $BUILD/$PKG_NAME/src/automatic.conf-sample $INSTALL/etc/automatic.conf
-
+  cp $PKG_DIR/config/automatic.conf $INSTALL/etc/automatic.conf

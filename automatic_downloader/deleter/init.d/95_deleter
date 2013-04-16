@@ -21,6 +21,9 @@
 # start deleter daemon
 #
 # runlevels: openelec, textmode
+if [ ! -e /storage/download ] ; then
+        mkdir -p /storage/download
+fi
 
 progress "start deleter daemon"
-  /bin/deleter /storage 10
+  /bin/deleter /storage/download 10

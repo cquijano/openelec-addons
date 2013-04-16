@@ -18,7 +18,7 @@
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-PKG_NAME="transmission_service"
+PKG_NAME="transmission"
 PKG_VERSION="2.77"
 PKG_REV="4"
 PKG_ARCH="any"
@@ -32,7 +32,7 @@ PKG_SECTION="service/system"
 PKG_SHORTDESC="transmission: a fast, easy and free BitTorrent client"
 PKG_LONGDESC="transmission is a fast, easy and free BitTorrent client"
 
-PKG_IS_ADDON="yes"
-PKG_ADDON_TYPE="xbmc.service"
+PKG_IS_ADDON="no"
+#PKG_ADDON_TYPE="xbmc.service"
 
 PKG_AUTORECONF="yes"

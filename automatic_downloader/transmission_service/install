@@ -23,9 +23,6 @@
 . config/options $1
 
 mkdir -p $INSTALL/bin
-  cp $BUILD/$PKG_NAME/daemon/automatic $INSTALL/bin/transmission-daemon
-  cp $BUILD/$PKG_NAME/daemon/transmission-remote $INSTALL/bin/transmission-remote
-
-mkdir -p $INSTALL/lib
-  cp $BUILD/libevent-[0-9]*/.libs/libevent*.so* $INSTALL/lib
+  cp $PKG_BUILD/daemon/transmission-daemon $INSTALL/bin/transmission-daemon
+  cp $PKG_BUILD/daemon/transmission-remote $INSTALL/bin/transmission-remote
 

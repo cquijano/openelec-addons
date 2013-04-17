@@ -22,8 +22,8 @@
 #
 # runlevels: openelec, textmode
 
-if [ ! -e /storage/download ] ; then
-	mkdir -p /storage/download
+if [ ! -e /storage/videos ] ; then
+	mkdir -p /storage/videos
 fi
 
 if [ ! -e /storage/incoming ] ; then
@@ -35,4 +35,4 @@ if [ ! -e /storage/watch ] ; then
 fi
 
 progress "start transmission daemon"
-  /bin/transmission-daemon -w /storage/download --incomplete-dir /storage/incoming --watch-dir /storage/watch -a '*.*.*.*' -T
+  /bin/transmission-daemon -w /storage/videos --incomplete-dir /storage/incoming --watch-dir /storage/watch -a '*.*.*.*' -T

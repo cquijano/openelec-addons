@@ -21,9 +21,6 @@
 # start automatic daemon
 #
 # runlevels: openelec, textmode
-if [ ! -e /storage/torrent ] ; then
-        mkdir -p /storage/torrent
-fi
 
 if [ ! -e /storage/automatic.state ] ; then
 	touch /storage/automatic.state

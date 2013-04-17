@@ -26,6 +26,10 @@ if [ ! -e /storage/videos ] ; then
 	mkdir -p /storage/videos
 fi
 
+if [ ! -e /storage/torrent ] ; then
+        ln -s /storage/videos /storage/torrent
+fi
+
 if [ ! -e /storage/incoming ] ; then
         mkdir -p /storage/incoming
 fi

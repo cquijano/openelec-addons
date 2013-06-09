@@ -25,4 +25,5 @@
 mkdir -p $INSTALL/bin
   cp $PKG_BUILD/daemon/transmission-daemon $INSTALL/bin/transmission-daemon
   cp $PKG_BUILD/daemon/transmission-remote $INSTALL/bin/transmission-remote
-
+mkdir -p $INSTALL/etc/transmission-daemon
+  cp $PKG_DIR/config/settings.json $INSTALL/etc/transmission-daemon/settings.json

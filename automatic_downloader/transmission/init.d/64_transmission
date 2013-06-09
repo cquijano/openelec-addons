@@ -39,6 +39,7 @@ if [ ! -e /storage/watch ] ; then
 fi
 if [ ! -e /storage/.transmission-daemon ] ; then
 	mkdir -p /storage/.transmission-daemon
+	cp /etc/transmission-daemon/settings.json /storage/.transmission-daemon
 fi
 
 progress "start transmission daemon"

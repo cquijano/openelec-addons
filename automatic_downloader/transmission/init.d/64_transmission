@@ -37,6 +37,9 @@ fi
 if [ ! -e /storage/watch ] ; then
         mkdir -p /storage/watch
 fi
+if [ ! -e /storage/.transmission-daemon ] ; then
+	mkdir -p /storage/.transmission-daemon
+fi
 
 progress "start transmission daemon"
-  /bin/transmission-daemon -w /storage/videos --incomplete-dir /storage/incoming --watch-dir /storage/watch -a '*.*.*.*' -T
+  /bin/transmission-daemon -w /storage/videos -g /storage/.transmission-daemon --incomplete-dir /storage/incoming --watch-dir /storage/watch -a '*.*.*.*' -T 

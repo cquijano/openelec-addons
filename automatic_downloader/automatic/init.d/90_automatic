@@ -26,6 +26,14 @@ if [ ! -e /storage/automatic.state ] ; then
 	touch /storage/automatic.state
 fi
 
+if [ ! -e /storage/.automatic ] ; then
+        mkdir -p /storage/.automatic 
+fi
+
+if [ ! -e /storage/.automatic/automatic.conf ] ; then
+       cp /etc/automatic.conf /storage/.automatic/automatic.conf
+fi
+
 PORT="$(netstat -tlpn |grep 9091)"
 while [ -z "$PORT" ] ; do
         sleep 1
@@ -34,4 +42,4 @@ while [ -z "$PORT" ] ; do
 done
 
 progress "start automatic daemon"
-  /bin/automatic -f -c /etc/automatic.conf > /dev/null 2>&1 &
+  /bin/automatic -f -c /storage/.automatic/automatic.conf > /dev/null 2>&1 &

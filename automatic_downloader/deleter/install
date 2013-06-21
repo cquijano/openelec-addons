@@ -23,5 +23,5 @@
 . config/options $1
 
 mkdir -p $INSTALL/bin
-  cp $BUILD/$PKG_NAME/deleter $INSTALL/bin/deleter
+  cp $BUILD/$PKG_NAME-$PKG_VERSION/deleter $INSTALL/bin/deleter
 

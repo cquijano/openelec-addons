@@ -42,5 +42,13 @@ if [ ! -e /storage/.transmission-daemon ] ; then
 	cp /etc/transmission-daemon/settings.json /storage/.transmission-daemon
 fi
 
+if [ ! -e /storage/.cache/cron/crontabs/root ] ; then                                                                                                       
+        mkdir -p /storage/.cache/cron/crontabs
+        echo '*       *       *       *       *       /bin/transmission_check.sh' > /storage/.cache/cron/crontabs/root
+fi                                                                                                                                                          
+ 
+progress "Starting cron daemon"     
+/sbin/crond -b   
+
 progress "start transmission daemon"
   /bin/transmission-daemon -w /storage/videos -g /storage/.transmission-daemon --incomplete-dir /storage/incoming --watch-dir /storage/watch -a '*.*.*.*' -T 

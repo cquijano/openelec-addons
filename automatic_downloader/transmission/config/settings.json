@@ -10,7 +10,7 @@
     "bind-address-ipv6": "::", 
     "blocklist-enabled": false, 
     "blocklist-url": "http://www.example.com/blocklist", 
-    "cache-size-mb": 2, 
+    "cache-size-mb": 8, 
     "dht-enabled": true, 
     "download-dir": "/storage/videos", 
     "download-queue-enabled": true, 

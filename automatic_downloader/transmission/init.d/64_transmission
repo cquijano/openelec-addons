@@ -47,16 +47,5 @@ if [ ! -e /storage/.cache/cron/crontabs/root ] ; then
         echo '*       *       *       *       *       /bin/transmission_check.sh' > /storage/.cache/cron/crontabs/root
 fi                                                                                                                                                          
  
-progress "Starting cron daemon"
-PID="$(/bin/pidof crond)"
-
-while [ -z "$PID" ] ; do
-        sleep 1
-        progress "Waiting for crond"
-	/sbin/crond -b
-        PID="$(/bin/pidof crond)"
-done
- 
-
 progress "start transmission daemon"
   /bin/transmission-daemon -w /storage/videos -g /storage/.transmission-daemon --incomplete-dir /storage/incoming --watch-dir /storage/watch -a '*.*.*.*' -T 
